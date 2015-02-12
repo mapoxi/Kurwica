@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "NSManagedObject+CRUD.h"
+#import "BezNozaNiePodchodz.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -20,6 +22,9 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (void)aSprobujKurwaNieDodacEncji;
+
+- (void)jakNieWypiszeszToWRyj;
 
 @end
 

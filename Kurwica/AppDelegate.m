@@ -8,12 +8,58 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () {
+    
+    NSArray *spisKurestw;
+    NSArray *wypisKurwiszona;
+}
 
 @end
 
 @implementation AppDelegate
 
+
+- (void)aSprobujKurwaNieDodacEncji {
+    
+    spisKurestw =
+    [NSArray arrayWithObjects:
+     [NSArray arrayWithObjects:@"Olek", @"posuwa", @"Konia", nil],
+     [NSArray arrayWithObjects:@"Kacper", @"zasuwa", @"na recznym", nil],
+     [NSArray arrayWithObjects:@"Irek", @"podnosi", @"mydlo", nil]
+     , nil];
+    
+    
+    
+    for (NSArray *kosa in spisKurestw) {
+        BezNozaNiePodchodz *kurestwoTotalne = [BezNozaNiePodchodz createObject];
+        kurestwoTotalne.huj = [kosa objectAtIndex:0];
+        kurestwoTotalne.kurwa = [kosa objectAtIndex:1];
+        kurestwoTotalne.jaPierdole = [kosa objectAtIndex:2];
+        NSLog(@"Tworzenie: %@ %@ %@...", kurestwoTotalne.huj, kurestwoTotalne.kurwa, kurestwoTotalne.jaPierdole);
+        [BezNozaNiePodchodz saveDatabase];
+        //[self saveContext];
+    }
+    
+    wypisKurwiszona = [BezNozaNiePodchodz readAllObjects];
+
+    for (BezNozaNiePodchodz *lodziarka in wypisKurwiszona) {
+        NSLog(@"W Burdelu: %@ %@ %@", lodziarka.huj, lodziarka.kurwa, lodziarka.jaPierdole);
+        
+    }
+}
+
+- (void)jakNieWypiszeszToWRyj {
+    NSManagedObjectContext *lodziarka = [self managedObjectContext];
+    NSFetchRequest *noPytamSieKurwa = [[NSFetchRequest alloc] init];
+    [noPytamSieKurwa setEntity:[NSEntityDescription entityForName:@"BezNozaNiePodchodz" inManagedObjectContext:lodziarka]];
+    
+    NSError *error =nil;
+    NSArray *burdel = [lodziarka executeFetchRequest:noPytamSieKurwa error:&error];
+    
+    for (NSManagedObject *dziwka in burdel) {
+        NSLog(@"W Burdelu: %@ %@ %@", [dziwka valueForKey:@"huj"], [dziwka valueForKey:@"kurwa"], [dziwka valueForKey:@"jaPierdole"]);
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

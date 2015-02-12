@@ -15,6 +15,8 @@
 		24B72A501A8CE8B6002FC7C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B72A4F1A8CE8B6002FC7C2 /* Images.xcassets */; };
 		24B72A531A8CE8B6002FC7C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B72A511A8CE8B6002FC7C2 /* LaunchScreen.xib */; };
 		24B72A5F1A8CE8B6002FC7C2 /* KurwicaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B72A5E1A8CE8B6002FC7C2 /* KurwicaTests.m */; };
+		24B72A6A1A8CE8E9002FC7C2 /* NSManagedObject+CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B72A691A8CE8E9002FC7C2 /* NSManagedObject+CRUD.m */; };
+		24B72A6D1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B72A6C1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,10 @@
 		24B72A581A8CE8B6002FC7C2 /* KurwicaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurwicaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B72A5D1A8CE8B6002FC7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B72A5E1A8CE8B6002FC7C2 /* KurwicaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KurwicaTests.m; sourceTree = "<group>"; };
+		24B72A681A8CE8E9002FC7C2 /* NSManagedObject+CRUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+CRUD.h"; sourceTree = "<group>"; };
+		24B72A691A8CE8E9002FC7C2 /* NSManagedObject+CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+CRUD.m"; sourceTree = "<group>"; };
+		24B72A6B1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezNozaNiePodchodz.h; sourceTree = "<group>"; };
+		24B72A6C1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezNozaNiePodchodz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +96,11 @@
 				24B72A4C1A8CE8B6002FC7C2 /* Main.storyboard */,
 				24B72A4F1A8CE8B6002FC7C2 /* Images.xcassets */,
 				24B72A511A8CE8B6002FC7C2 /* LaunchScreen.xib */,
+				24B72A681A8CE8E9002FC7C2 /* NSManagedObject+CRUD.h */,
+				24B72A691A8CE8E9002FC7C2 /* NSManagedObject+CRUD.m */,
 				24B72A461A8CE8B6002FC7C2 /* Kurwica.xcdatamodeld */,
+				24B72A6B1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.h */,
+				24B72A6C1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.m */,
 				24B72A3F1A8CE8B6002FC7C2 /* Supporting Files */,
 			);
 			path = Kurwica;
@@ -224,6 +234,8 @@
 			files = (
 				24B72A481A8CE8B6002FC7C2 /* Kurwica.xcdatamodeld in Sources */,
 				24B72A451A8CE8B6002FC7C2 /* AppDelegate.m in Sources */,
+				24B72A6A1A8CE8E9002FC7C2 /* NSManagedObject+CRUD.m in Sources */,
+				24B72A6D1A8CE9BF002FC7C2 /* BezNozaNiePodchodz.m in Sources */,
 				24B72A4B1A8CE8B6002FC7C2 /* ViewController.m in Sources */,
 				24B72A421A8CE8B6002FC7C2 /* main.m in Sources */,
 			);
@@ -349,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Kurwica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Kurwica/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

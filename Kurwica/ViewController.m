@@ -7,12 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
+@property AppDelegate *mydlo;
 
 @end
 
 @implementation ViewController
+- (IBAction)Gazownia:(id)sender {
+    _mydlo = [[AppDelegate alloc] init];
+    [_mydlo aSprobujKurwaNieDodacEncji];
+    //[_mydlo jakNieWypiszeszToWRyj];
+    NSLog(@"Baza wirusow Avast zostala zaktualizowana xD");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
